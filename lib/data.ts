@@ -1,0 +1,240 @@
+import type { Product } from "@/types"
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "iPhone 15 Pro Max 256GB",
+    slug: "iphone-15-pro-max-256gb",
+    price: 18999000,
+    discount: 5,
+    image: "/placeholder.svg?height=300&width=300",
+    images: [
+      "/placeholder.svg?height=600&width=600",
+      "/placeholder.svg?height=600&width=600",
+      "/placeholder.svg?height=600&width=600",
+    ],
+    description: "iPhone terbaru dengan teknologi A17 Pro chip dan kamera yang revolusioner.",
+    category: "electronics",
+    brand: "Apple",
+    rating: 4.8,
+    reviews: 1250,
+    stock: 25,
+    variants: {
+      color: ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+    },
+  },
+  {
+    id: "2",
+    name: "Samsung Galaxy S24 Ultra",
+    slug: "samsung-galaxy-s24-ultra",
+    price: 16999000,
+    discount: 10,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Smartphone flagship Samsung dengan S Pen dan kamera 200MP.",
+    category: "electronics",
+    brand: "Samsung",
+    rating: 4.7,
+    reviews: 890,
+    stock: 15,
+    variants: {
+      color: ["Titanium Black", "Titanium Gray", "Titanium Violet", "Titanium Yellow"],
+    },
+  },
+  {
+    id: "3",
+    name: "MacBook Air M3 13-inch",
+    slug: "macbook-air-m3-13-inch",
+    price: 18999000,
+    discount: 0,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Laptop tipis dan ringan dengan performa luar biasa dari chip M3.",
+    category: "electronics",
+    brand: "Apple",
+    rating: 4.9,
+    reviews: 567,
+    stock: 8,
+    variants: {
+      color: ["Midnight", "Starlight", "Silver", "Space Gray"],
+    },
+  },
+  {
+    id: "4",
+    name: "Nike Air Max 270",
+    slug: "nike-air-max-270",
+    price: 1899000,
+    discount: 20,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Sepatu olahraga dengan teknologi Air Max untuk kenyamanan maksimal.",
+    category: "fashion",
+    brand: "Nike",
+    rating: 4.6,
+    reviews: 2340,
+    stock: 50,
+    variants: {
+      color: ["Black/White", "White/Black", "Red/Black"],
+      size: ["40", "41", "42", "43", "44", "45"],
+    },
+  },
+  {
+    id: "5",
+    name: "Adidas Ultraboost 22",
+    slug: "adidas-ultraboost-22",
+    price: 2299000,
+    discount: 15,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Running shoes dengan teknologi Boost untuk energi return yang optimal.",
+    category: "fashion",
+    brand: "Adidas",
+    rating: 4.7,
+    reviews: 1890,
+    stock: 35,
+    variants: {
+      color: ["Core Black", "Cloud White", "Solar Red"],
+      size: ["40", "41", "42", "43", "44", "45"],
+    },
+  },
+  {
+    id: "6",
+    name: "Sony WH-1000XM5",
+    slug: "sony-wh-1000xm5",
+    price: 4999000,
+    discount: 8,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Headphone wireless dengan noise cancelling terbaik di kelasnya.",
+    category: "electronics",
+    brand: "Sony",
+    rating: 4.8,
+    reviews: 756,
+    stock: 20,
+    variants: {
+      color: ["Black", "Silver"],
+    },
+  },
+  {
+    id: "7",
+    name: "Uniqlo Heattech Crew Neck T-Shirt",
+    slug: "uniqlo-heattech-crew-neck-tshirt",
+    price: 199000,
+    discount: 25,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "T-shirt dengan teknologi Heattech untuk kehangatan ekstra.",
+    category: "fashion",
+    brand: "Uniqlo",
+    rating: 4.5,
+    reviews: 3450,
+    stock: 100,
+    variants: {
+      color: ["Black", "White", "Gray", "Navy"],
+      size: ["S", "M", "L", "XL", "XXL"],
+    },
+  },
+  {
+    id: "8",
+    name: "IKEA MALM Bed Frame",
+    slug: "ikea-malm-bed-frame",
+    price: 1999000,
+    discount: 0,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Rangka tempat tidur minimalis dengan desain Skandinavia.",
+    category: "home",
+    brand: "IKEA",
+    rating: 4.4,
+    reviews: 890,
+    stock: 12,
+    variants: {
+      color: ["White", "Black-brown", "Oak veneer"],
+    },
+  },
+  {
+    id: "9",
+    name: "PlayStation 5 Console",
+    slug: "playstation-5-console",
+    price: 7999000,
+    discount: 0,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Konsol gaming next-gen dengan performa dan grafis terdepan.",
+    category: "gaming",
+    brand: "Sony",
+    rating: 4.9,
+    reviews: 2100,
+    stock: 5,
+  },
+  {
+    id: "10",
+    name: "The Psychology of Money",
+    slug: "the-psychology-of-money",
+    price: 149000,
+    discount: 30,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Buku bestseller tentang psikologi dalam mengelola keuangan.",
+    category: "books",
+    brand: "Gramedia",
+    rating: 4.7,
+    reviews: 1250,
+    stock: 75,
+  },
+  {
+    id: "11",
+    name: "Toyota Avanza Veloz 1.5 AT",
+    slug: "toyota-avanza-veloz-15-at",
+    price: 245000000,
+    discount: 2,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "MPV keluarga dengan fitur lengkap dan irit bahan bakar.",
+    category: "automotive",
+    brand: "Toyota",
+    rating: 4.6,
+    reviews: 450,
+    stock: 3,
+    variants: {
+      color: ["White", "Silver", "Black", "Red"],
+    },
+  },
+  {
+    id: "12",
+    name: "Canon EOS R6 Mark II",
+    slug: "canon-eos-r6-mark-ii",
+    price: 32999000,
+    discount: 5,
+    image: "/placeholder.svg?height=300&width=300",
+    images: ["/placeholder.svg?height=600&width=600", "/placeholder.svg?height=600&width=600"],
+    description: "Kamera mirrorless full-frame untuk fotografi dan videografi profesional.",
+    category: "electronics",
+    brand: "Canon",
+    rating: 4.8,
+    reviews: 234,
+    stock: 7,
+  },
+]
+
+export function getProducts(): Product[] {
+  return products
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((product) => product.slug === slug)
+}
+
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter((product) => product.category === category)
+}
+
+export function searchProducts(query: string): Product[] {
+  const lowercaseQuery = query.toLowerCase()
+  return products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(lowercaseQuery) ||
+      product.description.toLowerCase().includes(lowercaseQuery) ||
+      product.brand.toLowerCase().includes(lowercaseQuery),
+  )
+}
