@@ -14,14 +14,14 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
 import { Textarea } from "@/components/ui/textarea"
-import { useCart } from "@/contexts/cart-context"
 import { useAuth } from "@/contexts/auth-context"
 import { formatPrice } from "@/lib/utils"
+import { useAuthStore, useCartStore } from "@/stores"
 
 export default function CheckoutPage() {
   const router = useRouter()
-  const { items, getTotalPrice, clearCart } = useCart()
-  const { user } = useAuth()
+  const { items, getTotalPrice, clearCart } = useCartStore()
+  const { user } = useAuthStore()
 
   const [shippingInfo, setShippingInfo] = useState({
     fullName: user?.name || "",
@@ -37,10 +37,10 @@ export default function CheckoutPage() {
   const [paymentMethod, setPaymentMethod] = useState("credit-card")
   const [isProcessing, setIsProcessing] = useState(false)
 
-  if (items.length === 0) {
-    router.push("/cart")
-    return null
-  }
+  // if (items.length === 0) {
+  //   router.push("/cart")
+  //   return null
+  // }
 
   const totalPrice = getTotalPrice()
   const shippingCosts = {

@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Eye, EyeOff } from "lucide-react"
@@ -15,7 +15,7 @@ import { useAuthStore } from "@/stores"
 
 export default function LoginPage() {
   const router = useRouter()
-  const {login, isLoading} = useAuthStore()
+  const {login, isLoading, loggedIn} = useAuthStore()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -47,6 +47,12 @@ export default function LoginPage() {
       // setIsLoading(false)
     }
   }
+
+  useEffect(() => {
+    if(loggedIn) {
+      router.push("/")
+    }
+  },[loggedIn, router])
 
   return (
     <div className="container mx-auto px-4 py-16">

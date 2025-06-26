@@ -6,11 +6,12 @@ import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { useCart } from "@/contexts/cart-context"
+// import { useCart } from "@/contexts/cart-context"
 import { formatPrice } from "@/lib/utils"
+import { useCartStore } from "@/stores"
 
 export default function CartPage() {
-  const { items, updateQuantity, removeItem, getTotalPrice, clearCart } = useCart()
+  const { items, updateQuantity, removeItem, getTotalPrice, clearCart } = useCartStore()
 
   if (items.length === 0) {
     return (

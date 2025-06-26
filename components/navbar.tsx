@@ -8,15 +8,16 @@ import { Search, ShoppingCart, User, Menu, X, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { useCart } from "@/contexts/cart-context"
-import { useAuth } from "@/contexts/auth-context"
+// import { useCart } from "@/contexts/cart-context"
+// import { useAuth } from "@/contexts/auth-context"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { useAuthStore, useCartStore } from "@/stores"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
-  const { items } = useCart()
-  const { user, logout } = useAuth()
+  const { items } = useCartStore()
+  const { user, logout } = useAuthStore()
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 

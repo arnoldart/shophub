@@ -11,13 +11,14 @@ import { Badge } from "@/components/ui/badge"
 import type { Product } from "@/types"
 import { useCart } from "@/contexts/cart-context"
 import { formatPrice } from "@/lib/utils"
+import { useCartStore } from "@/stores"
 
 interface ProductCardProps {
   product: Product
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { addItem } = useCart()
+  const { addItem } = useCartStore()
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault()
