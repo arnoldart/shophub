@@ -10,17 +10,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useAuth } from "@/contexts/auth-context"
+import { useAuthStore } from "@/stores"
+// import { useAuth } from "@/contexts/auth-context"
 
 export default function LoginPage() {
   const router = useRouter()
-  const { login } = useAuth()
+  const {login, isLoading} = useAuthStore()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   })
   const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  // const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
 
   const handleInputChange = (field: string, value: string) => {
@@ -30,7 +31,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsLoading(true)
+    // setIsLoading(true)
     setError("")
 
     try {
@@ -43,7 +44,7 @@ export default function LoginPage() {
     } catch (err) {
       setError("Terjadi kesalahan. Silakan coba lagi.")
     } finally {
-      setIsLoading(false)
+      // setIsLoading(false)
     }
   }
 
