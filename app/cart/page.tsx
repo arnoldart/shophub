@@ -2,12 +2,13 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react"
+import { Minus, Plus, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-// import { useCart } from "@/contexts/cart-context"
+import { useCart } from "@/contexts/cart-context"
 import { formatPrice } from "@/lib/utils"
+import EmptyState from "@/components/empty-state"
 import { useCartStore } from "@/stores"
 
 export default function CartPage() {
@@ -16,14 +17,13 @@ export default function CartPage() {
   if (items.length === 0) {
     return (
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <ShoppingBag className="h-24 w-24 mx-auto text-gray-300 mb-4" />
-          <h1 className="text-2xl font-bold mb-2">Keranjang Kosong</h1>
-          <p className="text-gray-600 mb-6">Belum ada produk di keranjang Anda</p>
-          <Button asChild>
-            <Link href="/products">Mulai Belanja</Link>
-          </Button>
-        </div>
+        <EmptyState
+          image="/images/empty-states/empty-cart.png"
+          title="Keranjang Kosong"
+          description="Belum ada produk di keranjang Anda. Mulai berbelanja dan temukan produk favorit!"
+          actionText="Mulai Belanja"
+          actionHref="/products"
+        />
       </div>
     )
   }

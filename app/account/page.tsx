@@ -9,9 +9,10 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useAuth } from "@/contexts/auth-context"
 import { formatPrice, formatDate } from "@/lib/utils"
+import { useAuthStore } from "@/stores"
 
 export default function AccountPage() {
-  const { user, logout } = useAuth()
+  const { user, logout } = useAuthStore()
   const [isEditing, setIsEditing] = useState(false)
   const [profileData, setProfileData] = useState({
     name: user?.name || "",
